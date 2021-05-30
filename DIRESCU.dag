@@ -1,0 +1,12 @@
+# DSICE.dag
+
+# arguments: N_workers, N_continuous_tasks_per_discrete_state
+
+# SCRIPT PRE init createSubFiles.sh 200 1 -init 300
+# JOB init master.sub
+
+SCRIPT PRE MW createSubFiles.sh 200 1
+SUBDAG EXTERNAL MW MW.dag
+SCRIPT POST MW throwerror.sh
+
+RETRY MW 299

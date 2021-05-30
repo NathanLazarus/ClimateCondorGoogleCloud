@@ -1,0 +1,6 @@
+# MW.dag
+
+JOB worker worker.sub
+JOB master master.sub
+
+PARENT worker CHILD master

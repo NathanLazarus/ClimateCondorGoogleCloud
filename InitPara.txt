@@ -1,0 +1,372 @@
+# version
+Version 0.3
+ 
+# Infinite horizon or finite horizon (0=finite, 1=infinite)
+Opt_Horizon 0
+ 
+# Maximum number of DP value function iterations (When DP VFI converges, it will stop)
+Number_VFI 300
+ 
+# horizon
+Horizon 300
+ 
+# Option for discount factor (0: beta; 1: exp(-rho*deltat))
+Discount_Opt 0
+ 
+# Discount factor (beta):
+Discount_Factor 0.985
+ 
+# terminal value function (0='given function', 1='steady state terminal value function')
+Terminal_Value_Fun 1
+ 
+# option for using last run
+Opt_Use_Last_Run 0
+ 
+# err
+Accumu_Err 0
+ 
+# Number of continuous state variables in the deterministic model
+Dim_Determine_Cont_State 10
+ 
+# Number of additional continuous state variables for the stochastic model
+Dim_Additional_Cont_State 1
+ 
+# Parameters for lower bound of continuous state variables
+Param_Cont_State_LB 
+0.02
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ 
+# Parameters for upper bound of continuous state variables
+Param_Cont_State_UB
+10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0.15
+ 
+# Dimension of discrete state variables
+Dim_Disc_State 1
+ 
+# Number of values for each discrete state variable
+Num_Val_Disc_State
+2
+ 
+# Option for discrete states values (0: given in next lines; 1: given by code)
+Opt_Code_Set_DS 0
+ 
+# values of discrete states values
+ValUe_DS
+0
+1
+ 
+# Option for discrete state transition probs (0: given in next lines;)
+Opt_Code_Set_Prob 1
+ 
+# Number of continuous random variable groups
+Num_Cont_RV_G 0
+ 
+# Number of state-dependent continuous random variable groups
+Num_State_Cont_RV_G 0
+
+# Number of discrete random variables (not include discrete states)
+Num_Disc_RV 0
+ 
+# precomputation of quadrature
+Pre_Comp_Quad_Opt 0
+ 
+# Approximation method
+Approximation_Opt 8
+ 
+# Option for expanded Chebyshev polynomial approximation
+Option_ExpandCheby 1
+ 
+# Shape-preserving option (1=yes, 0=no)
+Shape_Opt 0
+ 
+# Option of Hermite approximation for value functions (0=no)
+Hermite_Opt 0
+ 
+# Option for using grid (0=tensor, 1=KPU, 2=Quad grid, 3=Triple grid, 4=QMC)
+Grid_Opt 0
+ 
+# Option of same number of nodes and degrees for each dimension (0: same, 1: different)
+Option_Diff 1 
+ 
+# Number of nodes for one dimension:
+Number_Node 
+5
+5
+5
+5
+3
+5
+5
+5
+5
+5
+5
+ 
+# Total degree of approximation polynomial/splines:
+Total_Degree 4
+ 
+# degree of approximation polynomial/splines:
+Degree
+4
+4
+4
+4
+2
+4
+4
+4
+4
+4
+4
+ 
+# Option of explicit derivative formulas for objective and constraint functions (1=yes, 0=no)
+Derivative_Opt 1
+ 
+# Optimality tolerance digit
+Optim_Tol_Digit 8
+ 
+# Feasibility tolerance digit
+Feas_Tol_Digit 8
+   
+# Methods for computing coefficients (0: Direct method; 1: L1 approx; 2: L2 approx)
+Comp_Coef_Method 0
+ 
+# Option for pre-computing method (0:no, 1:yes)
+Pre_Computing_Opt 0
+ 
+# Option for end-period value function method (0:no, 1:yes)
+Middle_Opt 0
+ 
+# cancel zero coefficients (0: no; 1: yes)
+Zero_Coefs_Opt 0
+ 
+# define which number as zero
+Zero_Number 0
+ 
+# number of continuous control variables
+Num_Cont_Ctrl_Var 8
+ 
+# number of discrete control variables
+Num_Disc_Ctrl_Var 0
+ 
+# scale option for control variables (0: no scaling; 1: scaled)
+Scale_Ctrl_Opt 0
+ 
+# number of linear constraints
+Num_Linear_Constr 0
+ 
+# number of nonlinear constraints
+Num_NonLinear_Constr 2
+ 
+# number of points for verification
+Num_Verify_Nodes 1000
+ 
+# type of verification points (0: Monte Carlo; 1: Niederreiter quasi-MC)
+Type_Verify_Nodes 0
+ 
+# Option for output solutions (0: standard; 1: user defined)
+Out_Sol_Opt 1
+ 
+# Option for debugging printout (0: No printout; 1: optimization printout; 3: user defined)
+Printout_Debug_Opt 0
+ 
+# Save Memory Option
+Opt_Save_Mem 0
+ 
+# option for computing coefficients in parallel
+Parallel_Coef_Comp_Opt 0
+ 
+# option for using log(V)
+Opt_Log_Value 0
+ 
+# option for using policy function guess
+Opt_Use_PolicyFun 0
+ 
+# option for reporting error estimate for policy function 
+Opt_Err_Policy 0
+ 
+# number of coef files
+Num_Coef_File 300
+
+# option for saving policy functions
+Opt_Save_Policy 0
+ 
+# option for generating output table
+Opt_Use_Table 0
+  
+################ user defined parameters are listed in the following ############
+ 
+# Model Option
+Model_Opt 1
+ 
+# Discount factor
+Discount_factor 0.985
+ 
+# time step size (deltat)
+Time_Step 1
+ 
+# number of continuous tipping
+N_Cont_Tip 1
+ 
+# durantion of continuous tipping
+Dur_Cont_Tip_Dam
+50
+ 
+# hazard rate and threshold of continuous tipping
+Hazard_Rate_Threshold
+0.00063064
+1
+ 
+# number of tipping points
+Num_Tipping 1
+ 
+# Transition type of tipping
+Tran_Tip_Type 0
+ 
+# Hazard type option
+Hazard_Type 2
+ 
+# intertemporal elasticity of substitution
+IES 1.5                
+ 
+# Risk coefficient of power utility c^(1-gamma)/(1-gamma) for consumption c (gamma):
+Risk_Aversion 3.066                  
+ 
+# Minimal and maximal Difference of emission controls (from 0 to 1)
+Min_Max_Diff_Miu
+0.0
+0.3
+ 
+# ratio of min C/Y and max C/Y (from 0 to 1)
+C_Ratio_Y_Min_Max
+0.6
+0.8
+ 
+# Production function (i.e., f(k,L,theta)=theta*omega*(1-Gamma)*A*k^alpha*L^(1-alpha) ) parameter (alpha):
+Alpha 0.3
+ 
+# transition parameters for Carbon at Atmosphere and Ocean (phi_{12}, phi_{23}):
+Carbon_Transition_Params
+0.023736
+0.0013565
+ 
+# Temperature equation transfer coefficients (xi1, xi2, xi3, B, gam1, gam2, eta1, eta2):
+Temperature_Transfer_Coefs
+0.11287
+0.22965
+0.0015855
+0.001
+0.095498
+0.19571
+0.031068
+0.001
+ 
+# SLR damage function parameters for NORTH (pi1, pi2):
+SLR_Damage_Param
+0.00447
+0.01146
+ 
+# warming damage function parameters for NORTH (pi3, pi4):
+Temp_Damage_Param
+0.00079286
+0.00026947
+ 
+# SLR damage function parameters for Tropic (pi1, pi2):
+SLR_Damage_Param
+0.004076
+0.006459
+ 
+# warming damage function parameters for Tropic (pi3, pi4):
+Temp_Damage_Param
+0.0033713
+0.0010496
+ 
+# SLR vs temperature function parameters (zetaSLR1, zetaSLR2, zetaSLR3):
+SLR_vs_Temp
+0.0026467
+0.27388
+0.38631
+ 
+# permafrost vs temperature function parameters (zetaP1, zetaP2, zetaP3):
+Permafrost_vs_Temp
+1.98611
+-0.12018
+0.23564
+ 
+# adaptation cost coefficients
+Adapt_Cost_Coefs
+0.115
+3.6
+ 
+# cost coefficient for economic interaction
+Cost_Econ_Interact 1
+ 
+# initial level of total factor productivity
+Init_TFP
+7.331
+3.582
+ 
+# Initial growth rate for TFP per year
+Init_Growth_TFP
+0.01301
+0.01844
+ 
+# Decline rate of TFP growth per year
+Decline_Rate_TFP
+0.00526
+0.00607
+ 
+# initial carbon intensity
+Init_Carbon_Intensity
+0.094
+0.104
+ 
+# initial growth rate of carbon intensity
+Init_Growth_Carbon_Intensity
+-0.0156
+-0.0181
+ 
+# decline rate of growth of carbon intensity
+Decline_Rate_Carbon_Intensity
+0.0063
+0.00698
+ 
+# initial backstop technology
+Init_Backstop_Tech
+1.715
+2.185
+ 
+# Estimated forcings of equilibrium co2 doubling (eta)
+Eta_Force 3.68
+ 
+# rate of depreciation of capital (per year) (deltaK)
+Depreciation_Rate 0.1
+ 
+# parameter of abatement-cost function (theta2)
+Abatement_Cost_Param 2.6
+ 
+# option of using log(K)
+Opt_Log_K 1
+ 
+# use CoverY as ctrl variable
+Use_CoverY_Opt 1
+ 
