@@ -29,8 +29,6 @@ if args.init != None:
 	with open(WhichStage, 'w') as f:
 		f.write(str(args.init))
 else:
-	# if thisStage = -1, ClimateMaster will do the initialization.
-
 	with open(WhichStage, 'r') as f:
 		thisStage = int(next(f))
 
@@ -61,8 +59,8 @@ max_retries             = 10
 periodic_release        = (HoldReasonCode == 35) && (NumJobStarts < 10)
 
 Rank                    = kflops
-request_disk            = 2GB
-request_memory          = 4GB
+request_disk            = 18GB
+request_memory          = 40GB
 queue {6}
 """.format(workerSubFile, workerDockerImage, parameterFile, args.NumTaskCont, thisStage, deterministicSolFile, args.Nworkers, additionalDataFile, thisStage + 1)
 
@@ -96,8 +94,8 @@ max_retries             = 10
 periodic_release        = (HoldReasonCode == 35) && (NumJobStarts < 10)
 
 Rank                    = kflops
-request_disk            = 2GB
-request_memory          = 8GB
+request_disk            = 18GB
+request_memory          = 40GB
 queue
 """.format(masterSubFile, masterDockerImage, parameterFile, args.NumTaskCont, thisStage, deterministicSolFile, args.Nworkers, additionalDataFile, workerfiles, ncores_master)
 
