@@ -11,7 +11,7 @@ condor-master condor-compute condor-submit:
 	     --machine-type=m1-ultramem-40 \
 	     --image=debian-9-stretch-v20210122 \
 	     --image-project=debian-cloud \
-	     --boot-disk-size=20GB \
+	     --boot-disk-size=200GB \
 	     --metadata-from-file startup-script=startup-scripts/$@.sh ; \
 	   sleep 300 ;\
 	   gcloud compute instances stop --zone=us-east1-b $@-template ;\
