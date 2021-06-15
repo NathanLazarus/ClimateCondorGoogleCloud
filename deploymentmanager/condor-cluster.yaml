@@ -19,8 +19,8 @@ resources:
 - name: condor-cluster
   type: condor.jinja
   properties:
-    count: 2 
-    pvmcount: 2
-    zone: us-east1-b
+    count: 0
+    pvmcount: 4
+    zone: northamerica-northeast1-b
     email: nathanlazarus3@gmail.com
     instancetype: m1-ultramem-40
