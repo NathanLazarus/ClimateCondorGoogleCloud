@@ -7,19 +7,19 @@ condor-master condor-compute condor-submit:
 	   echo "- building $@" ;\
 	   echo ""; \
 	   gcloud compute  instances create  $@-template \
-	     --zone=northamerica-northeast1-b \
+	     --zone=asia-east1-b \
 	     --machine-type=m1-ultramem-40 \
 	     --image=debian-9-stretch-v20210216 \
 	     --image-project=debian-cloud \
 	     --boot-disk-size=10GB \
 	     --metadata-from-file startup-script=startup-scripts/$@.sh ; \
 	   sleep 300 ;\
-	   gcloud compute instances stop --zone=northamerica-northeast1-b $@-template ;\
+	   gcloud compute instances stop --zone=asia-east1-b $@-template ;\
 	   gcloud compute images create $@  \
 	     --source-disk $@-template   \
-	     --source-disk-zone northamerica-northeast1-b   \
+	     --source-disk-zone asia-east1-b   \
 	     --family htcondor-debian ;\
-	   gcloud compute instances delete --quiet --zone=northamerica-northeast1-b $@-template ;\
+	   gcloud compute instances delete --quiet --zone=asia-east1-b $@-template ;\
 	else \
 	   echo "$@ image already exists"; \
 	fi
