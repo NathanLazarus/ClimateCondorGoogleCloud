@@ -50,7 +50,7 @@ properties:
     description: Number of instances on the pre-emptible compute pool.
   instancetype:
     type: string
-    description: machine type to use, eg. m1-ultramem-40.
+    description: machine type to use, eg. n1-highmem-64.
   masterimage:
     type: string
     description: system image to use for master

@@ -21,6 +21,6 @@ resources:
   properties:
     count: 0
     pvmcount: 4
-    zone: asia-east1-b
+    zone: us-east1-b
     email: nathanlazarus3@gmail.com
-    instancetype: m1-ultramem-40
+    instancetype: n1-highmem-64
