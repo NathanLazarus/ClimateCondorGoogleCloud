@@ -8,7 +8,7 @@ condor-master condor-compute condor-submit:
 	   echo ""; \
 	   gcloud compute  instances create  $@-template \
 	     --zone=us-east1-b \
-	     --machine-type=n1-highmem-64 \
+	     --machine-type=n1-highmem-8 \
 	     --image=debian-9-stretch-v20210216 \
 	     --image-project=debian-cloud \
 	     --boot-disk-size=10GB \
